@@ -70,7 +70,7 @@ $$
 $$
 
 which illustrate, respectively, mixing within the dominant eigenspace and
-leakage into the complementary eigenspace.
+leakage into the complement eigenspace.
 
 It also plots, for each approximate eigenvector $\widehat v_i$, the total
 perturbation magnitude
@@ -79,7 +79,7 @@ $$
 \tau_i = \lVert \widehat v_i-v_i\rVert _2,
 $$
 
-together with its dominant- and complementary-subspace components,
+together with its dominant- and complement-subspace components,
 
 $$
 \eta_i = \lVert Q_k^T(\widehat v_i-v_i)\rVert_2,
@@ -92,7 +92,7 @@ $$
 $$
 
 These diagnostics distinguish the overall perturbation magnitude from its
-direction relative to the dominant and complementary eigenspaces.
+direction relative to the dominant and complement eigenspaces.
 
 ## Experiments
 
@@ -117,7 +117,7 @@ ExactLMPvsLMP
 
 ### `LMPRoundingError.m`
 
-Investigates rounding errors in the dominant and complementary subspaces and
+Investigates rounding errors in the dominant and complement subspaces and
 compares observed errors with the corresponding theoretical bounds.
 
 Run with
@@ -133,12 +133,12 @@ Runs synthetic experiments with perturbed dominant eigenvectors.
 The script
 
 1. generates random perturbation directions;
-2. controls the complementary-subspace component of the perturbations;
+2. controls the complement-subspace component of the perturbations;
 3. scales the perturbations according to prescribed values $\tau_i$;
 4. reorthogonalizes the perturbed eigenvectors;
 5. computes the actual perturbation magnitudes after reorthogonalization;
 6. runs the Spectral-LMP/CG experiments; and
-7. computes dominant-subspace mixing and complementary-subspace leakage
+7. computes dominant-subspace mixing and complement-subspace leakage
    diagnostics.
 
 Run with
@@ -276,7 +276,7 @@ $$
 \widehat V_k^TQ_{k+1:n}
 $$
 
-to measure contamination from the complementary eigenspace.
+to measure contamination from the complement eigenspace.
 
 For each approximate eigenvector, the total error is
 
@@ -284,7 +284,7 @@ $$
 \tau_i=\|\widehat v_i-v_i\|_2.
 $$
 
-The code also separates this error into dominant- and complementary-subspace
+The code also separates this error into dominant- and complement-subspace
 components and reports the global leakage measure
 
 $$
