@@ -106,7 +106,7 @@ Compares
 
 The exactly clustered system and the Spectral-LMP-preconditioned system have
 the same clustered spectrum in exact arithmetic. Their different numerical
-behavior therefore illustrates finite-precision effects in the practical
+behavior therefore illustrates rounding-error effects in the practical
 application of the preconditioner.
 
 Run with
