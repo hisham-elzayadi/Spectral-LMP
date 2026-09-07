@@ -82,13 +82,13 @@ $$
 together with its dominant- and complementary-subspace components,
 
 $$
-\eta_i = \|Q_k^T(\widehat v_i-v_i)\|_2,
+\eta_i = \lVert Q_k^T(\widehat v_i-v_i)\rVert_2,
 $$
 
 and
 
 $$
-\delta_i = \|Q_{k+1:n}^T(\widehat v_i-v_i)\|_2.
+\delta_i = \lVert Q_{k+1:n}^T(\widehat v_i-v_i)\rVert_2.
 $$
 
 These diagnostics distinguish the overall perturbation magnitude from its
