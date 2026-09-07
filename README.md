@@ -76,7 +76,7 @@ It also plots, for each approximate eigenvector $\widehat v_i$, the total
 perturbation magnitude
 
 $$
-\tau_i = \lVert|\widehat v_i-v_i\rVert|_2,
+\tau_i = \lVert \widehat v_i-v_i\rVert _2,
 $$
 
 together with its dominant- and complementary-subspace components,
