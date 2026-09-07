@@ -123,14 +123,9 @@ Run with
 SyncSLMP_CG
 ```
 
-The supplied script defines three synthetic experiments. To run all of them,
-use
-
-```matlab
-for experimentID = 1:length(experiments)
-```
-
-in place of a loop restricted to a single experiment.
+The script runs all three synthetic perturbation experiments defined in
+`SyncSLMP_CG.m` and produces the corresponding convergence and eigenvector
+diagnostics.
 
 ### `Nystrom_Experiment.m`
 
