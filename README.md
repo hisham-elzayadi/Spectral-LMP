@@ -255,44 +255,16 @@ explicitly after $Q$ and the eigenvalues have been generated.
 
 ## Eigenvector perturbation diagnostics
 
-Let
+The experiments distinguish between the magnitude and direction of the
+eigenvector perturbations. For each approximate eigenvector, $\tau_i$ measures
+the total perturbation magnitude, while $\eta_i$ and $\delta_i$ measure its
+components in the dominant and complementary eigenspaces, respectively.
 
-$$
-Q_k=[v_1,\ldots,v_k]
-$$
-
-contain the exact dominant eigenvectors and let $\widehat V_k$ contain their
-approximations.
-
-The code examines
-
-$$
-\widehat V_k^TQ_k
-$$
-
-to measure mixing with the exact dominant eigenspace and
-
-$$
-\widehat V_k^TQ_{k+1:n}
-$$
-
-to measure contamination from the complement eigenspace.
-
-For each approximate eigenvector, the total error is
-
-$$
-\tau_i=\|\widehat v_i-v_i\|_2.
-$$
-
-The code also separates this error into dominant- and complement-subspace
-components and reports the global leakage measure
-
-$$
-\|\widehat V_k^TQ_{k+1:n}\|_2,
-$$
-
-which is related to the largest principal angle between the exact and
-approximate dominant subspaces.
+The heat maps of $|\widehat V_k^T Q_k|$ and
+$|\widehat V_k^T Q_{k+1:n}|$ provide additional information about mixing
+within the dominant eigenspace and leakage into the complementary eigenspace.
+These diagnostics are used to relate the structure of the approximate
+spectral information to the observed Spectral-LMP convergence.
 
 ## Citation
 
