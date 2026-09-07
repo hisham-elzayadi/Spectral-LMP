@@ -54,21 +54,45 @@ Plots the relative forward-error histories for the different cluster-point
 choices.
 
 `plot_eigenvector_diagnostics.m`  
-Plots
+Visualizes the accuracy and subspace structure of the approximate dominant
+eigenvectors.
+
+The routine produces heat maps of
 
 $$
 |\widehat V_k^T Q_k|
 $$
 
-to visualize mixing with the exact dominant eigenspace, and
+and
 
 $$
-|\widehat V_k^T Q_{k+1:n}|
+|\widehat V_k^T Q_{k+1:n}|,
 $$
 
-to visualize leakage into the complementary eigenspace. It also plots the
-individual perturbation magnitudes and their dominant- and
-complementary-subspace components.
+which illustrate, respectively, mixing within the dominant eigenspace and
+leakage into the complementary eigenspace.
+
+It also plots, for each approximate eigenvector $\widehat v_i$, the total
+perturbation magnitude
+
+$$
+\tau_i = \|\widehat v_i-v_i\|_2,
+$$
+
+together with its dominant- and complementary-subspace components,
+
+$$
+\eta_i = \|Q_k^T(\widehat v_i-v_i)\|_2,
+$$
+
+and
+
+$$
+\delta_i = \|Q_{k+1:n}^T(\widehat v_i-v_i)\|_2.
+$$
+
+These diagnostics distinguish the overall perturbation magnitude from its
+direction relative to the dominant and complementary eigenspaces.
 
 ## Experiments
 
