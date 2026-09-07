@@ -277,10 +277,6 @@ If you use this code, please cite the accompanying paper:
 Publication details and DOI can be added here when available.
 
 ## License
-
-A license for the original code in this repository should be added before
-public release.
-
 `pcg_modified.m` is derived from MATLAB's `pcg` implementation and is therefore
 not presented as original code of the authors. It retains the MathWorks
 copyright notice and is included because the experiments were performed using
