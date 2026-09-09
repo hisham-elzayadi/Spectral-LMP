@@ -33,7 +33,17 @@ The code is written in MATLAB. Place the repository on the MATLAB path:
 addpath(pwd)
 ```
 
-No compilation or package installation is required.
+The modified PCG routine `pcg_modified.m` requires the MATLAB helper functions
+
+```text
+iterchk
+iterapp
+itermsg
+```
+
+These helper functions are not included in this repository and must be available through the user's MATLAB installation.
+
+No compilation or additional package installation is required.
 
 ## Getting started
 
