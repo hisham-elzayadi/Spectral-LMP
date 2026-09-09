@@ -33,15 +33,22 @@ The code is written in MATLAB. Place the repository on the MATLAB path:
 addpath(pwd)
 ```
 
-The modified PCG routine `pcg_modified.m` requires the MATLAB helper functions
+The modified PCG routine `pcg_modified.m` requires the MATLAB helper functions `iterchk` and `iterapp`. These functions are not included in this repository and must be accessible on the MATLAB path.
 
-```text
-iterchk
-iterapp
-itermsg
+To check whether MATLAB can locate them, run:
+
+```matlab
+which iterchk
+which iterapp
 ```
 
-These helper functions are not included in this repository and must be available through the user's MATLAB installation.
+MATLAB should return the location of each function. If either function cannot be found, make the directory containing the required helper functions available on the MATLAB path, for example:
+
+```matlab
+addpath('path\to\helper\functions')
+```
+
+You can verify again using `which iterchk` and `which iterapp` before running the experiments.
 
 No compilation or additional package installation is required.
 
@@ -208,6 +215,6 @@ Publication details and DOI will be added when available.
 
 `pcg_modified.m` is derived from MATLAB's `pcg` implementation and retains the corresponding MathWorks copyright notice. The modification adds the output `x_hist`, which records the initial iterate and the CG iterate produced at each iteration and is used to compute relative forward-error histories.
 
-The MATLAB helper routines used by `pcg_modified.m`, including routines such as `iterchk`, `iterapp`, and `itermsg`, are not distributed with this repository and are expected to be available through the user's MATLAB installation.
+The MATLAB helper routines used by `pcg_modified.m`, including `iterchk` and `iterapp`, are not distributed with this repository and are expected to be available through the user's MATLAB installation.
 
 Users should consult the applicable MathWorks license terms regarding use and redistribution of MATLAB-derived code.
