@@ -54,15 +54,14 @@ No compilation or additional package installation is required.
 
 ## Getting started
 
-To run a synthetic Spectral-LMP experiment with perturbed dominant eigenvectors, use
+After cloning or downloading the repository, open MATLAB and set the repository directory as the current folder, or add it to the MATLAB path:
 
 ```matlab
-SyncSLMP_CG
+cd('path\to\Spectral-LMP')
+addpath(pwd)
 ```
 
-This generates the test problem, constructs perturbed spectral information, runs CG/PCG with different cluster-point choices, and produces convergence and eigenvector diagnostics.
-
-Other experiments can be run directly from their corresponding MATLAB scripts as described below.
+The numerical experiments are provided as MATLAB scripts and can be run directly from the MATLAB Command Window. See the **Numerical experiments** section below for the available experiments and their descriptions.
 
 ## Numerical experiments
 
