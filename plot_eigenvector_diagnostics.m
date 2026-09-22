@@ -128,10 +128,6 @@ set(gcf, ...
     'Units','centimeters', ...
     'Position',[2 2 28 21]);
 
-% Optional export
-% exportgraphics(gcf,'ritzit_Diagnostics.pdf', ...
-%     'ContentType','vector');
-
 %% Plot actual eigenvector error and its components
 
 figure;
@@ -212,15 +208,5 @@ yticks(ax3,10.^(emin:emax));
 ax3.XGrid = 'on';
 ax3.YGrid = 'on';
 ax3.YMinorGrid = 'off';
-
-% Figure size
-set(gcf, ...
-    'Color','w', ...
-    'Units','centimeters', ...
-    'Position',[2 2 24 16]);
-
-% Optional export
-% exportgraphics(gcf,'ritzit_IndividualErrors.pdf', ...
-%     'ContentType','vector');
 
 end
