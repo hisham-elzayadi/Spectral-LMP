@@ -51,14 +51,14 @@ bPre = APre(x);
 %% CG and PCG experiments
 
 % Apply standard CG to the original unpreconditioned system
-[~,~,~,~,~,~,XCG] = pcg_modified(A,b,1e-16,30);
+[~,~,~,~,~,XCG] = pcg_modified(A,b,1e-16,30);
 
 % Define the Spectral-LMP using the exact dominant eigenvectors and
 % eigenvalues, with cluster point theta = 1
 LMP = @(u) Spectral_LMP(Q,lamdas,k,1,u);
 
 % Apply PCG to the original system using the practical Spectral-LMP
-[~,~,~,~,~,~,XLMP] = pcg_modified(A,b,1e-16,30,LMP);
+[~,~,~,~,~,XLMP] = pcg_modified(A,b,1e-16,30,LMP);
 
 % Apply CG directly to the exactly clustered system.
 % In exact arithmetic, this system is spectrally equivalent to the
