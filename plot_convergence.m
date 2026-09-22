@@ -141,7 +141,4 @@ end
 
 ylim(ax,[10^emin 10^emax]);
 yticks(ax,10.^(emin:emax));
-%Optional export
-% exportgraphics(gcf,'ritzit_Convergence.pdf', ...
-%    'ContentType','vector');
 end
