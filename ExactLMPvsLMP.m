@@ -63,7 +63,7 @@ LMP = @(u) Spectral_LMP(Q,lamdas,k,1,u);
 % Apply CG directly to the exactly clustered system.
 % In exact arithmetic, this system is spectrally equivalent to the
 % Spectral-LMP preconditioned system.
-[~,~,~,~,~,~,X] = pcg_modified(APre,bPre,1e-16,30);
+[~,~,~,~,~,X] = pcg_modified(APre,bPre,1e-16,30);
 
 %% Compute relative solution errors
 
