@@ -198,6 +198,7 @@ Publication details and DOI will be added when available.
 
 `pcg_modified.m` is derived from MATLAB's `pcg` implementation and retains the corresponding MathWorks copyright notice. The modification adds the output `x_hist`, which records the initial iterate and the CG iterate produced at each iteration and is used to compute relative forward-error plots.
 
-The MATLAB helper routines used by `pcg_modified.m`, including `iterchk` and `iterapp`, are not distributed with this repository and are expected to be available through the user's MATLAB installation.
+The MATLAB helper routines used by `pcg_modified.m`, including `iterchk` and `iterapp`, are included in this repository.
 
-Users should consult the applicable MathWorks license terms regarding use and redistribution of MATLAB-derived code.
+Users should consult the applicable MathWorks license terms regarding the use and redistribution of MATLAB-derived code and helper routines.
+
