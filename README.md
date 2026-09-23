@@ -33,24 +33,8 @@ The code is written in MATLAB. Place the repository on the MATLAB path:
 addpath(pwd)
 ```
 
-The modified PCG routine `pcg_modified.m` requires the MATLAB helper functions `iterchk` and `iterapp`. These functions are not included in this repository and must be accessible on the MATLAB path.
+The MATLAB helper routines used by `pcg_modified.m`, including `iterchk` and `iterapp`, are included in this repository.
 
-To check whether MATLAB can locate them, run:
-
-```matlab
-which iterchk
-which iterapp
-```
-
-MATLAB should return the location of each function. If either function cannot be found, make the directory containing the required helper functions available on the MATLAB path, for example:
-
-```matlab
-addpath('path\to\helper\functions')
-```
-
-You can verify again using `which iterchk` and `which iterapp` before running the experiments.
-
-No compilation or additional package installation is required.
 
 ## Getting started
 
